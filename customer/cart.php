@@ -136,7 +136,7 @@ $tables = $conn->query("SELECT * FROM tables WHERE status = 'available' ORDER BY
                     </div>
                     <div class="cart-item-details">
                         <h3><?php echo $item['name']; ?></h3>
-                        <p class="price">$<?php echo number_format($item['price'], 2); ?></p>
+                        <p class="price">₹<?php echo number_format($item['price'], 2); ?></p>
                     </div>
                     <div class="cart-item-quantity">
                         <form method="POST" action="">
@@ -148,7 +148,7 @@ $tables = $conn->query("SELECT * FROM tables WHERE status = 'available' ORDER BY
                         </form>
                     </div>
                     <div class="cart-item-total">
-                        <p>$<?php echo number_format($item['price'] * $item['quantity'], 2); ?></p>
+                        <p>₹<?php echo number_format($item['price'] * $item['quantity'], 2); ?></p>
                     </div>
                     <div class="cart-item-remove">
                         <form method="POST" action="">
@@ -166,15 +166,15 @@ $tables = $conn->query("SELECT * FROM tables WHERE status = 'available' ORDER BY
                     <h2>Order Summary</h2>
                     <div class="summary-row">
                         <span>Subtotal</span>
-                        <span>$<?php echo number_format($total_amount, 2); ?></span>
+                        <span>₹<?php echo number_format($total_amount, 2); ?></span>
                     </div>
                     <div class="summary-row">
                         <span>Tax (10%)</span>
-                        <span>$<?php echo number_format($total_amount * 0.10, 2); ?></span>
+                        <span>₹<?php echo number_format($total_amount * 0.10, 2); ?></span>
                     </div>
                     <div class="summary-row total">
                         <span>Total</span>
-                        <span>$<?php echo number_format($total_amount * 1.10, 2); ?></span>
+                        <span>₹<?php echo number_format($total_amount * 1.10, 2); ?></span>
                     </div>
 
                     <form method="POST" action="" class="order-type-form">

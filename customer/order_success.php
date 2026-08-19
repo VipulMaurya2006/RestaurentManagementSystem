@@ -52,7 +52,7 @@ $order = $stmt->get_result()->fetch_assoc();
             <h1>Order Placed Successfully!</h1>
             <p>Your order #<?php echo $order_id; ?> has been received</p>
             <p class="order-status">Status: <span><?php echo ucfirst($order['status']); ?></span></p>
-            <p class="order-total">Total: $<?php echo number_format($order['total_amount'] * 1.10, 2); ?></p>
+            <p class="order-total">Total: ₹<?php echo number_format($order['total_amount'] * 1.10, 2); ?></p>
             <div class="success-actions">
                 <a href="my_orders.php" class="btn-primary">View My Orders</a>
                 <a href="menu.php" class="btn-secondary">Order More</a>

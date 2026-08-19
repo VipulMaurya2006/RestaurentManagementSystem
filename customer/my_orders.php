@@ -76,7 +76,7 @@ $orders = $stmt->get_result();
                     <?php if ($order['table_number']): ?>
                     <p><strong>Table:</strong> <?php echo $order['table_number']; ?></p>
                     <?php endif; ?>
-                    <p><strong>Total:</strong> $<?php echo number_format($order['total_amount'] * 1.10, 2); ?></p>
+                    <p><strong>Total:</strong> ₹<?php echo number_format($order['total_amount'] * 1.10, 2); ?></p>
                 </div>
                 <div class="order-actions">
                     <a href="order_details.php?id=<?php echo $order['id']; ?>" class="btn-view">View Details</a>

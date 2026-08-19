@@ -90,7 +90,7 @@ $menu_items = $conn->query("SELECT * FROM menu_items ORDER BY category, name");
                         <h3><?php echo $item['name']; ?></h3>
                         <p class="category"><?php echo $item['category']; ?></p>
                         <p class="description"><?php echo $item['description']; ?></p>
-                        <p class="price">$<?php echo number_format($item['price'], 2); ?></p>
+                        <p class="price">₹<?php echo number_format($item['price'], 2); ?></p>
                         <div class="menu-item-actions">
                             <button class="btn-edit" onclick="editItem(<?php echo htmlspecialchars(json_encode($item)); ?>)">
                                 <i class="fa-solid fa-edit"></i> Edit

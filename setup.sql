@@ -94,12 +94,12 @@ ON DUPLICATE KEY UPDATE username=username;
 
 -- Insert sample menu items
 INSERT INTO menu_items (name, description, price, category, image) VALUES
-('Grilled Chicken', 'Tender grilled chicken with herbs', 15.99, 'Main Course', 'chicken.jpg'),
-('Beef Burger', 'Juicy beef burger with cheese', 12.99, 'Main Course', 'burger.jpg'),
-('Caesar Salad', 'Fresh caesar salad with croutons', 8.99, 'Appetizer', 'salad.jpg'),
-('Pizza Margherita', 'Classic pizza with tomato and mozzarella', 14.99, 'Main Course', 'pizza.jpg'),
-('Chocolate Cake', 'Rich chocolate dessert', 6.99, 'Dessert', 'cake.jpg'),
-('French Fries', 'Crispy golden fries', 4.99, 'Side', 'fries.jpg')
+('Grilled Chicken', 'Tender grilled chicken with herbs', 349.00, 'Main Course', 'chicken.jpg'),
+('Beef Burger', 'Juicy beef burger with cheese', 249.00, 'Main Course', 'burger.jpg'),
+('Caesar Salad', 'Fresh caesar salad with croutons', 179.00, 'Appetizer', 'salad.jpg'),
+('Pizza Margherita', 'Classic pizza with tomato and mozzarella', 299.00, 'Main Course', 'pizza.jpg'),
+('Chocolate Cake', 'Rich chocolate dessert', 149.00, 'Dessert', 'cake.jpg'),
+('French Fries', 'Crispy golden fries', 99.00, 'Side', 'fries.jpg')
 ON DUPLICATE KEY UPDATE name=name;
 
 -- Insert sample tables

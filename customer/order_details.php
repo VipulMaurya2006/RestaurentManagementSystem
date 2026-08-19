@@ -99,7 +99,7 @@ $order_items = $stmt->get_result();
                             <p class="quantity">Quantity: <?php echo $item['quantity']; ?></p>
                         </div>
                         <div class="item-price">
-                            <p>$<?php echo number_format($item['price'] * $item['quantity'], 2); ?></p>
+                            <p>₹<?php echo number_format($item['price'] * $item['quantity'], 2); ?></p>
                         </div>
                     </div>
                     <?php endwhile; ?>
@@ -107,15 +107,15 @@ $order_items = $stmt->get_result();
                 <div class="order-total">
                     <div class="total-row">
                         <span>Subtotal:</span>
-                        <span>$<?php echo number_format($order['total_amount'], 2); ?></span>
+                        <span>₹<?php echo number_format($order['total_amount'], 2); ?></span>
                     </div>
                     <div class="total-row">
                         <span>Tax (10%):</span>
-                        <span>$<?php echo number_format($order['total_amount'] * 0.10, 2); ?></span>
+                        <span>₹<?php echo number_format($order['total_amount'] * 0.10, 2); ?></span>
                     </div>
                     <div class="total-row final">
                         <span>Total:</span>
-                        <span>$<?php echo number_format($order['total_amount'] * 1.10, 2); ?></span>
+                        <span>₹<?php echo number_format($order['total_amount'] * 1.10, 2); ?></span>
                     </div>
                 </div>
             </div>

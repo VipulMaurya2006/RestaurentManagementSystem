@@ -82,7 +82,7 @@ $categories = $conn->query("SELECT DISTINCT category FROM menu_items WHERE is_av
                     <p class="category"><?php echo $item['category']; ?></p>
                     <p class="description"><?php echo $item['description']; ?></p>
                     <div class="menu-item-footer">
-                        <span class="price">$<?php echo number_format($item['price'], 2); ?></span>
+                        <span class="price">₹<?php echo number_format($item['price'], 2); ?></span>
                         <form method="POST" action="add_to_cart.php">
                             <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
                             <button type="submit" class="add-to-cart">

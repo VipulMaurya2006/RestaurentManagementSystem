@@ -77,7 +77,7 @@ $orders = $conn->query("SELECT o.*, u.username, u.full_name FROM orders o JOIN u
                             </td>
                             <td><?php echo ucfirst(str_replace('_', ' ', $order['order_type'])); ?></td>
                             <td><?php echo $order['table_number'] ?: '-'; ?></td>
-                            <td>$<?php echo number_format($order['total_amount'], 2); ?></td>
+                            <td>₹<?php echo number_format($order['total_amount'], 2); ?></td>
                             <td><span class="status <?php echo $order['status']; ?>"><?php echo ucfirst($order['status']); ?></span></td>
                             <td><?php echo date('M j, Y g:i A', strtotime($order['created_at'])); ?></td>
                             <td>

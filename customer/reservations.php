@@ -14,12 +14,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['make_reservation'])) {
     $email = trim($_POST['email']);
     $date = $_POST['date'];
     $time = $_POST['time'];
-    $number_of_guests = $_POST['number_of_guests'];
-    
+    $number_of_guests = (int) $_POST['number_of_guests'];
+
     $stmt = $conn->prepare("INSERT INTO reservations (user_id, name, phone, email, date, time, number_of_guests, status) VALUES (?, ?, ?, ?, ?, ?, ?, 'pending')");
-    $stmt->bind_param("issssi", $_SESSION['user_id'], $name, $phone, $email, $date, $time, $number_of_guests);
+
+    $stmt->bind_param(
+        "isssssi",
+        $_SESSION['user_id'],
+        $name,
+        $phone,
+        $email,
+        $date,
+        $time,
+        $number_of_guests
+    );
+
     $stmt->execute();
-    
+
     $success = "Reservation submitted successfully! We'll confirm your reservation shortly.";
 }
 
